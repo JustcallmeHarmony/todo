@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 650px) {
+  .App {
+    width: 640px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
+@media (max-width: 650px) {
+  .App {
+    width: 90vh;
+  }
+}
+
+#root {
+  background-color: white;
+  box-shadow: rgba(100, 100, 11, 0.2) 0px 7px 29px 0px;
+}
+
+.App {
   min-height: 100vh;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.head_title {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #cacaca;
+  height: 10vh;
+}
+/* CALENDAR */
+.calendar {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 30vh;
+  border-bottom: 2px solid #cacaca;
+}
+
+.calendar_month_week_label {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.calendar_month_week_label_name {
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calendar_day_name {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.calendar_day_cell {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar_day_cell {
+}
+
+.calendar_dot_marked {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.todd-list-section {
+  display: flex;
+  height: 60vh;
+  border-bottom: 2px solid #cacaca;
+}
+
+.button-list-section {
+  display: flex;
+  height: 10vh;
 }
