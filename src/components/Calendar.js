@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import CircleIcon from "@mui/icons-material/Circle";
-
 // 날짜가 오늘인지 확인하는 함수입니다. 입력된 날짜와 현재 날짜가 같은지 비교합니다.
 const isToday = (date) => {
   const today = new Date();
@@ -34,9 +32,7 @@ const CalendarDate = ({ date, isPrevMonth, isNextMonth, mark }) => {
       {/* // 날짜가 오늘인 경우 'today' 클래스를 추가합니다. */}
       <span className={today && "today"}>{date.getDate()}</span>
       {/* 마크에 따라 다른 스타일의 점을 표시합니다. */}
-      <span className={dotClassName}>
-        <CircleIcon fontSize="" />
-      </span>
+      <span className={dotClassName}></span>
     </div>
   );
 };

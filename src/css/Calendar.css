@@ -44,6 +44,10 @@
   top: 25px;
 }
 
+.days_grid div:hover {
+  color: aqua;
+}
+
 .days_grid div span {
   display: flex;
   justify-content: center;

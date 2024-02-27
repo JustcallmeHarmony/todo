@@ -1,8 +1,15 @@
 import SvgIcon from "@mui/material/SvgIcon";
 import BorderColorIcon from "@mui/icons-material/BorderColor";
 import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
+import { useNavigate } from "react-router-dom";
 
 const Todo = () => {
+  const navigate = useNavigate();
+
+  const handleEditClick = () => {
+    navigate("/edit");
+  };
+
   return (
     <div>
       {/* 할 일 목록 부분입니다. 할 일 제목과 할 일 카드를 포함합니다. */}
@@ -11,7 +18,7 @@ const Todo = () => {
           <h3 className="todo_head_title">할 일</h3>
           <h4 className="todo_head_sub">오늘 마감 1개</h4>
           {/* 할 일 추가 버튼을 표시합니다. */}
-          <section className="todo_head_icon">
+          <section className="todo_head_icon" onClick={handleEditClick}>
             <SvgIcon component={BorderColorIcon} inheritViewBox />
           </section>
         </div>
